@@ -20,7 +20,7 @@ contract DrinkShop {
     }
 
     function purchase(uint liter) public payable {
-        require(msg.value >= liter * 1 ether, "Price is 0.2 ether per donut");
+        require(msg.value >= liter * 1 ether, "Price is 1 ether per liter drink");
         require(drinkLiterBalance[address(this)] >= liter, "drinks not available");
         drinkLiterBalance[address(this)] -= liter;
         drinkLiterBalance[msg.sender] += liter;
