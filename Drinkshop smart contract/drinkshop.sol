@@ -15,7 +15,7 @@ contract DrinkShop {
     }
 
     function AddDrinks(uint256 liter) public {
-        require(msg.sender == drinkshopowner,"Shop owner can add drink to the machine");
+        require(msg.sender == drinkshopowner,"Shop owner can add drink to the shop");
         drinkLiterBalance[address(this)] += liter;
     }
 
